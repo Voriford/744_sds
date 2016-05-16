@@ -97,16 +97,9 @@ student9 = Student("Ноговицын Станислав Николаевич")
 student10 = Student("Осин Иван Владимирович")
 
 # statistics:
-stat1 = Statistics(1)
-stat2 = Statistics(2)
-stat3 = Statistics(3)
-stat4 = Statistics(4)
-stat5 = Statistics(5)
-stat6 = Statistics(6)
-stat7 = Statistics(7)
-stat8 = Statistics(8)
-stat9 = Statistics(9)
-stat10 = Statistics(10)
+stats = []
+for i in range(1, 11):
+    stats[i] = Statistics(i)
 
 # subjects:
 subject1 = Subject('timp')
@@ -116,74 +109,18 @@ subject4 = Subject('english')
 subject5 = Subject('sport')
 
 # scores:
-# student1
-score1_1 = Score(1, 1, randint(1, 5))
-score1_2 = Score(1, 2, randint(1, 5))
-score1_3 = Score(1, 3, randint(1, 5))
-score1_4 = Score(1, 4, randint(1, 5))
-score1_5 = Score(1, 5, randint(1, 5))
-# student2
-score2_1 = Score(2, 1, randint(1, 5))
-score2_3 = Score(2, 3, randint(1, 5))
-score2_4 = Score(2, 4, randint(1, 5))
-score2_5 = Score(2, 5, randint(1, 5))
-score2_2 = Score(2, 2, randint(1, 5))
-# student3
-score3_1 = Score(3, 1, randint(1, 5))
-score3_2 = Score(3, 2, randint(1, 5))
-score3_3 = Score(3, 3, randint(1, 5))
-score3_4 = Score(3, 4, randint(1, 5))
-score3_5 = Score(3, 5, randint(1, 5))
-# student 4
-score4_1 = Score(4, 1, randint(1, 5))
-score4_2 = Score(4, 2, randint(1, 5))
-score4_3 = Score(4, 3, randint(1, 5))
-score4_4 = Score(4, 4, randint(1, 5))
-score4_5 = Score(4, 5, randint(1, 5))
-# student 5
-score5_1 = Score(5, 1, randint(1, 5))
-score5_2 = Score(5, 2, randint(1, 5))
-score5_3 = Score(5, 3, randint(1, 5))
-score5_4 = Score(5, 4, randint(1, 5))
-score5_5 = Score(5, 5, randint(1, 5))
-# student 6
-score6_1 = Score(6, 1, randint(1, 5))
-score6_2 = Score(6, 2, randint(1, 5))
-score6_3 = Score(6, 3, randint(1, 5))
-score6_4 = Score(6, 4, randint(1, 5))
-score6_5 = Score(6, 5, randint(1, 5))
-# student 7
-score7_1 = Score(7, 1, randint(1, 5))
-score7_2 = Score(7, 2, randint(1, 5))
-score7_3 = Score(7, 3, randint(1, 5))
-score7_4 = Score(7, 4, randint(1, 5))
-score7_5 = Score(7, 5, randint(1, 5))
-# student 8
-score8_1 = Score(8, 1, randint(1, 5))
-score8_2 = Score(8, 2, randint(1, 5))
-score8_3 = Score(8, 3, randint(1, 5))
-score8_4 = Score(8, 4, randint(1, 5))
-score8_5 = Score(8, 5, randint(1, 5))
-# student 9
-score9_1 = Score(9, 1, randint(1, 5))
-score9_2 = Score(9, 2, randint(1, 5))
-score9_3 = Score(9, 3, randint(1, 5))
-score9_4 = Score(9, 4, randint(1, 5))
-score9_5 = Score(9, 5, randint(1, 5))
-# student 10
-score10_1 = Score(10, 1, randint(1, 5))
-score10_2 = Score(10, 2, randint(1, 5))
-score10_3 = Score(10, 3, randint(1, 5))
-score10_4 = Score(10, 4, randint(1, 5))
-score10_5 = Score(10, 5, randint(1, 5))
+scores = [[0]*5]*10
+for i in range(1, 11):
+    for j in range(1, 6):
+        scores[i][j] = Score(i, j, randint(1, 5))
 
 # init:
 Student.get_students(Student)
 Subject.get_subjects(Subject)
 Subject.get_rsubjects(Subject)
 Score.get_average_scores(Score)
-main_stats = [[], [], [], [], [], [], [], [], [], []]
-for i in range(0, 10):
+main_stats = []
+for i in range(10):
     main_stats[i] = {
         'id': i + 1,
         'fio': Student.students.get(i + 1),
