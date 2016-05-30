@@ -6,7 +6,7 @@ class IndexView(TemplateView):
     template_name = "index.html"
 
     def get_context_data(self, **kwargs):
-        spisokFIO = ['Petr Petrov', 'Ivan Ivanov', 'Nikolay Sidorov', 'Aleksey Molotov', 'Viktor Dragunov', 'Konstantin Kovrov', 'Sergey Korolev', 'Yuriy Gagarin', 'Aleksandr Suvorov','Aleksandr Pushkin']
+        spisokFIO = ['Svetovets Dmitry', 'Azhel Nikita', 'Kuznecova Anna', 'Gazizov Rustam', 'Andreeva Julia', 'Vlasenko Anastasia', 'Pekarskih Svetlana', 'Kultaev Pavel', 'Oblakov Dmitry','Prokushev Pavel']
         import random
         spisokTIMP = []
         spisokEIS = []
